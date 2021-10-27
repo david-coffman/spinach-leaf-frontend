@@ -1,0 +1,29 @@
+{
+  "name": "spinach-leaf-frontend",
+  "version": "1.0.0",
+  "description": "Front-end for ECE459 design project.",
+  "main": "index.js",
+  "scripts": {
+    "clean": "npx tsfmt -r & npm i & npm prune; rm -rf dist",
+    "build": "npx tsc --build tsconfig.json",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/david-coffman/spinach-leaf-frontend.git"
+  },
+  "author": "David Coffman",
+  "license": "ISC",
+  "dependencies": {
+
+  },
+  "devDependencies": {
+    "@types/node": "^16.6.1",
+    "typescript": "^4.3.5",
+    "typescript-formatter": "^7.2.2"
+  },
+  "bugs": {
+    "url": "https://github.com/david-coffman/spinach-leaf-frontend/issues"
+  },
+  "homepage": "https://github.com/david-coffman/spinach-leaf-frontend#readme"
+}
