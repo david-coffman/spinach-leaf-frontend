@@ -42,10 +42,34 @@ class SensorSuite: NSObject, ObservableObject {
     var peripheral: CBPeripheral?
     var characteristicMap = [BLEUUID: CBCharacteristic]()
     var characteristicValues = [BLEUUID: String]()
+    var refreshTimer: Timer?
     
     override init() {
         super.init()
         self.centralManager = CBCentralManager(delegate: self, queue: nil)
+        sensorRefreshLoop()
+    }
+    
+    func sensorRefreshLoop() {
+        self.refreshTimer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { timer in
+            guard timer.isValid else { return }
+            DispatchQueue.main.async {
+                self.refreshSensorData()
+            }
+        }
+    }
+    
+    func refreshSensorData() {
+        guard let peripheral = self.peripheral else { return }
+        for characteristic in self.characteristicMap.values {
+            peripheral.readValue(for: characteristic)
+        }
+    }
+    
+    deinit {
+        if let timer = self.refreshTimer {
+            timer.invalidate()
+        }
     }
 }
 
@@ -103,8 +127,9 @@ extension SensorSuite: CBPeripheralDelegate {
             let uuid = BLEUUID.from(characteristic.uuid),
             let dataAsStr = String(data: value, encoding: .utf8)
         else { return }
-        
+        print("Got data value [\(dataAsStr)] for sensor with UUID [\(uuid)]!")
         characteristicValues[uuid] = dataAsStr
+        objectWillChange.send()
     }
 }
 
