@@ -1,0 +1,756 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CEE220C527399F3F00838067 /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE220C427399F3F00838067 /* Tests_iOS.swift */; };
+		CEE220C727399F3F00838067 /* Tests_iOSLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE220C627399F3F00838067 /* Tests_iOSLaunchTests.swift */; };
+		CEE220D127399F4000838067 /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE220D027399F4000838067 /* Tests_macOS.swift */; };
+		CEE220D327399F4000838067 /* Tests_macOSLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE220D227399F4000838067 /* Tests_macOSLaunchTests.swift */; };
+		CEE220D427399F4000838067 /* SensorSuiteApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE220AC27399F3F00838067 /* SensorSuiteApp.swift */; };
+		CEE220D527399F4000838067 /* SensorSuiteApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE220AC27399F3F00838067 /* SensorSuiteApp.swift */; };
+		CEE220D627399F4000838067 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE220AD27399F3F00838067 /* ContentView.swift */; };
+		CEE220D727399F4000838067 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE220AD27399F3F00838067 /* ContentView.swift */; };
+		CEE220D827399F4000838067 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEE220AE27399F3F00838067 /* Assets.xcassets */; };
+		CEE220D927399F4000838067 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEE220AE27399F3F00838067 /* Assets.xcassets */; };
+		CEE220E927399F6F00838067 /* SensorSuite.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE220E827399F6F00838067 /* SensorSuite.swift */; };
+		CEE220EA27399F6F00838067 /* SensorSuite.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE220E827399F6F00838067 /* SensorSuite.swift */; };
+		CEE220EC2739BFBF00838067 /* SensorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE220EB2739BFBF00838067 /* SensorController.swift */; };
+		CEE220ED2739BFBF00838067 /* SensorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE220EB2739BFBF00838067 /* SensorController.swift */; };
+		CEE220F02739CB7E00838067 /* SensorDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE220EF2739CB7E00838067 /* SensorDataSource.swift */; };
+		CEE220F12739CB7E00838067 /* SensorDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE220EF2739CB7E00838067 /* SensorDataSource.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CEE220C127399F3F00838067 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CEE220A727399F3E00838067 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CEE220B227399F3F00838067;
+			remoteInfo = "SensorSuite (iOS)";
+		};
+		CEE220CD27399F4000838067 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CEE220A727399F3E00838067 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CEE220B827399F3F00838067;
+			remoteInfo = "SensorSuite (macOS)";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CEE220AC27399F3F00838067 /* SensorSuiteApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorSuiteApp.swift; sourceTree = "<group>"; };
+		CEE220AD27399F3F00838067 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		CEE220AE27399F3F00838067 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CEE220B327399F3F00838067 /* SensorSuite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SensorSuite.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEE220B927399F3F00838067 /* SensorSuite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SensorSuite.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEE220BB27399F3F00838067 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
+		CEE220C027399F3F00838067 /* Tests iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEE220C427399F3F00838067 /* Tests_iOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_iOS.swift; sourceTree = "<group>"; };
+		CEE220C627399F3F00838067 /* Tests_iOSLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_iOSLaunchTests.swift; sourceTree = "<group>"; };
+		CEE220CC27399F4000838067 /* Tests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEE220D027399F4000838067 /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
+		CEE220D227399F4000838067 /* Tests_macOSLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOSLaunchTests.swift; sourceTree = "<group>"; };
+		CEE220E827399F6F00838067 /* SensorSuite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorSuite.swift; sourceTree = "<group>"; };
+		CEE220EB2739BFBF00838067 /* SensorController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorController.swift; sourceTree = "<group>"; };
+		CEE220EE2739CA3800838067 /* SensorSuite--iOS--Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "SensorSuite--iOS--Info.plist"; sourceTree = "<group>"; };
+		CEE220EF2739CB7E00838067 /* SensorDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorDataSource.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CEE220B027399F3F00838067 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEE220B627399F3F00838067 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEE220BD27399F3F00838067 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEE220C927399F4000838067 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CEE220A627399F3E00838067 = {
+			isa = PBXGroup;
+			children = (
+				CEE220EE2739CA3800838067 /* SensorSuite--iOS--Info.plist */,
+				CEE220AB27399F3F00838067 /* Shared */,
+				CEE220BA27399F3F00838067 /* macOS */,
+				CEE220C327399F3F00838067 /* Tests iOS */,
+				CEE220CF27399F4000838067 /* Tests macOS */,
+				CEE220B427399F3F00838067 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CEE220AB27399F3F00838067 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				CEE220AC27399F3F00838067 /* SensorSuiteApp.swift */,
+				CEE220AD27399F3F00838067 /* ContentView.swift */,
+				CEE220AE27399F3F00838067 /* Assets.xcassets */,
+				CEE220E827399F6F00838067 /* SensorSuite.swift */,
+				CEE220EB2739BFBF00838067 /* SensorController.swift */,
+				CEE220EF2739CB7E00838067 /* SensorDataSource.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		CEE220B427399F3F00838067 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CEE220B327399F3F00838067 /* SensorSuite.app */,
+				CEE220B927399F3F00838067 /* SensorSuite.app */,
+				CEE220C027399F3F00838067 /* Tests iOS.xctest */,
+				CEE220CC27399F4000838067 /* Tests macOS.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CEE220BA27399F3F00838067 /* macOS */ = {
+			isa = PBXGroup;
+			children = (
+				CEE220BB27399F3F00838067 /* macOS.entitlements */,
+			);
+			path = macOS;
+			sourceTree = "<group>";
+		};
+		CEE220C327399F3F00838067 /* Tests iOS */ = {
+			isa = PBXGroup;
+			children = (
+				CEE220C427399F3F00838067 /* Tests_iOS.swift */,
+				CEE220C627399F3F00838067 /* Tests_iOSLaunchTests.swift */,
+			);
+			path = "Tests iOS";
+			sourceTree = "<group>";
+		};
+		CEE220CF27399F4000838067 /* Tests macOS */ = {
+			isa = PBXGroup;
+			children = (
+				CEE220D027399F4000838067 /* Tests_macOS.swift */,
+				CEE220D227399F4000838067 /* Tests_macOSLaunchTests.swift */,
+			);
+			path = "Tests macOS";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CEE220B227399F3F00838067 /* SensorSuite (iOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CEE220DC27399F4000838067 /* Build configuration list for PBXNativeTarget "SensorSuite (iOS)" */;
+			buildPhases = (
+				CEE220AF27399F3F00838067 /* Sources */,
+				CEE220B027399F3F00838067 /* Frameworks */,
+				CEE220B127399F3F00838067 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "SensorSuite (iOS)";
+			productName = "SensorSuite (iOS)";
+			productReference = CEE220B327399F3F00838067 /* SensorSuite.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CEE220B827399F3F00838067 /* SensorSuite (macOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CEE220DF27399F4000838067 /* Build configuration list for PBXNativeTarget "SensorSuite (macOS)" */;
+			buildPhases = (
+				CEE220B527399F3F00838067 /* Sources */,
+				CEE220B627399F3F00838067 /* Frameworks */,
+				CEE220B727399F3F00838067 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "SensorSuite (macOS)";
+			productName = "SensorSuite (macOS)";
+			productReference = CEE220B927399F3F00838067 /* SensorSuite.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CEE220BF27399F3F00838067 /* Tests iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CEE220E227399F4000838067 /* Build configuration list for PBXNativeTarget "Tests iOS" */;
+			buildPhases = (
+				CEE220BC27399F3F00838067 /* Sources */,
+				CEE220BD27399F3F00838067 /* Frameworks */,
+				CEE220BE27399F3F00838067 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CEE220C227399F3F00838067 /* PBXTargetDependency */,
+			);
+			name = "Tests iOS";
+			productName = "Tests iOS";
+			productReference = CEE220C027399F3F00838067 /* Tests iOS.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		CEE220CB27399F4000838067 /* Tests macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CEE220E527399F4000838067 /* Build configuration list for PBXNativeTarget "Tests macOS" */;
+			buildPhases = (
+				CEE220C827399F4000838067 /* Sources */,
+				CEE220C927399F4000838067 /* Frameworks */,
+				CEE220CA27399F4000838067 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CEE220CE27399F4000838067 /* PBXTargetDependency */,
+			);
+			name = "Tests macOS";
+			productName = "Tests macOS";
+			productReference = CEE220CC27399F4000838067 /* Tests macOS.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CEE220A727399F3E00838067 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1310;
+				LastUpgradeCheck = 1310;
+				TargetAttributes = {
+					CEE220B227399F3F00838067 = {
+						CreatedOnToolsVersion = 13.1;
+					};
+					CEE220B827399F3F00838067 = {
+						CreatedOnToolsVersion = 13.1;
+					};
+					CEE220BF27399F3F00838067 = {
+						CreatedOnToolsVersion = 13.1;
+						TestTargetID = CEE220B227399F3F00838067;
+					};
+					CEE220CB27399F4000838067 = {
+						CreatedOnToolsVersion = 13.1;
+						TestTargetID = CEE220B827399F3F00838067;
+					};
+				};
+			};
+			buildConfigurationList = CEE220AA27399F3E00838067 /* Build configuration list for PBXProject "SensorSuite" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CEE220A627399F3E00838067;
+			productRefGroup = CEE220B427399F3F00838067 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CEE220B227399F3F00838067 /* SensorSuite (iOS) */,
+				CEE220B827399F3F00838067 /* SensorSuite (macOS) */,
+				CEE220BF27399F3F00838067 /* Tests iOS */,
+				CEE220CB27399F4000838067 /* Tests macOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CEE220B127399F3F00838067 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEE220D827399F4000838067 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEE220B727399F3F00838067 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEE220D927399F4000838067 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEE220BE27399F3F00838067 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEE220CA27399F4000838067 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CEE220AF27399F3F00838067 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEE220D627399F4000838067 /* ContentView.swift in Sources */,
+				CEE220E927399F6F00838067 /* SensorSuite.swift in Sources */,
+				CEE220EC2739BFBF00838067 /* SensorController.swift in Sources */,
+				CEE220F02739CB7E00838067 /* SensorDataSource.swift in Sources */,
+				CEE220D427399F4000838067 /* SensorSuiteApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEE220B527399F3F00838067 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEE220D727399F4000838067 /* ContentView.swift in Sources */,
+				CEE220EA27399F6F00838067 /* SensorSuite.swift in Sources */,
+				CEE220ED2739BFBF00838067 /* SensorController.swift in Sources */,
+				CEE220F12739CB7E00838067 /* SensorDataSource.swift in Sources */,
+				CEE220D527399F4000838067 /* SensorSuiteApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEE220BC27399F3F00838067 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEE220C727399F3F00838067 /* Tests_iOSLaunchTests.swift in Sources */,
+				CEE220C527399F3F00838067 /* Tests_iOS.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEE220C827399F4000838067 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEE220D327399F4000838067 /* Tests_macOSLaunchTests.swift in Sources */,
+				CEE220D127399F4000838067 /* Tests_macOS.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CEE220C227399F3F00838067 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CEE220B227399F3F00838067 /* SensorSuite (iOS) */;
+			targetProxy = CEE220C127399F3F00838067 /* PBXContainerItemProxy */;
+		};
+		CEE220CE27399F4000838067 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CEE220B827399F3F00838067 /* SensorSuite (macOS) */;
+			targetProxy = CEE220CD27399F4000838067 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		CEE220DA27399F4000838067 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CEE220DB27399F4000838067 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		CEE220DD27399F4000838067 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6B9AVVLM29;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "SensorSuite--iOS--Info.plist";
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "Requires access to Bluetooth.";
+				INFOPLIST_KEY_NSBluetoothPeripheralUsageDescription = "Requires access to Bluetooth.";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.davidcoffman.SensorSuite;
+				PRODUCT_NAME = SensorSuite;
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CEE220DE27399F4000838067 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6B9AVVLM29;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "SensorSuite--iOS--Info.plist";
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "Requires access to Bluetooth.";
+				INFOPLIST_KEY_NSBluetoothPeripheralUsageDescription = "Requires access to Bluetooth.";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.davidcoffman.SensorSuite;
+				PRODUCT_NAME = SensorSuite;
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CEE220E027399F4000838067 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6B9AVVLM29;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.davidcoffman.SensorSuite;
+				PRODUCT_NAME = SensorSuite;
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		CEE220E127399F4000838067 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6B9AVVLM29;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.davidcoffman.SensorSuite;
+				PRODUCT_NAME = SensorSuite;
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		CEE220E327399F4000838067 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6B9AVVLM29;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.davidcoffman.Tests-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "SensorSuite (iOS)";
+			};
+			name = Debug;
+		};
+		CEE220E427399F4000838067 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6B9AVVLM29;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.davidcoffman.Tests-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "SensorSuite (iOS)";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CEE220E627399F4000838067 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6B9AVVLM29;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.davidcoffman.Tests-macOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = "SensorSuite (macOS)";
+			};
+			name = Debug;
+		};
+		CEE220E727399F4000838067 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6B9AVVLM29;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.davidcoffman.Tests-macOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = "SensorSuite (macOS)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CEE220AA27399F3E00838067 /* Build configuration list for PBXProject "SensorSuite" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CEE220DA27399F4000838067 /* Debug */,
+				CEE220DB27399F4000838067 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CEE220DC27399F4000838067 /* Build configuration list for PBXNativeTarget "SensorSuite (iOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CEE220DD27399F4000838067 /* Debug */,
+				CEE220DE27399F4000838067 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CEE220DF27399F4000838067 /* Build configuration list for PBXNativeTarget "SensorSuite (macOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CEE220E027399F4000838067 /* Debug */,
+				CEE220E127399F4000838067 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CEE220E227399F4000838067 /* Build configuration list for PBXNativeTarget "Tests iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CEE220E327399F4000838067 /* Debug */,
+				CEE220E427399F4000838067 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CEE220E527399F4000838067 /* Build configuration list for PBXNativeTarget "Tests macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CEE220E627399F4000838067 /* Debug */,
+				CEE220E727399F4000838067 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CEE220A727399F3E00838067 /* Project object */;
+}
