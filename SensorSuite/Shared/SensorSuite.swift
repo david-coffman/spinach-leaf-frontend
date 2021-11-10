@@ -41,7 +41,7 @@ class SensorSuite: NSObject, ObservableObject {
     var centralManager: CBCentralManager!
     var peripheral: CBPeripheral?
     var characteristicMap = [BLEUUID: CBCharacteristic]()
-    var characteristicValues = [BLEUUID: String]()
+    var characteristicValues = [BLEUUID: [UInt8]]()
     var refreshTimer: Timer?
     
     override init() {
@@ -61,8 +61,18 @@ class SensorSuite: NSObject, ObservableObject {
     
     func refreshSensorData() {
         guard let peripheral = self.peripheral else { return }
-        for characteristic in self.characteristicMap.values {
-            peripheral.readValue(for: characteristic)
+        
+        switch peripheral.state {
+        case .connected:
+            for characteristic in self.characteristicMap.values {
+                peripheral.readValue(for: characteristic)
+            }
+        case .disconnected:
+            if !self.centralManager.isScanning {
+                centralManagerDidUpdateState(self.centralManager)
+            }
+        default:
+            return
         }
     }
     
@@ -124,11 +134,9 @@ extension SensorSuite: CBPeripheralDelegate {
     func peripheral(_ peripheral: CBPeripheral, didUpdateValueFor characteristic: CBCharacteristic, error: Error?) {
         guard
             let value = characteristic.value,
-            let uuid = BLEUUID.from(characteristic.uuid),
-            let dataAsStr = String(data: value, encoding: .utf8)
+            let uuid = BLEUUID.from(characteristic.uuid)
         else { return }
-        print("Got data value [\(dataAsStr)] for sensor with UUID [\(uuid)]!")
-        characteristicValues[uuid] = dataAsStr
+        characteristicValues[uuid] = value.reversed().reversed()
         objectWillChange.send()
     }
 }
@@ -144,11 +152,11 @@ extension SensorSuite: SensorDataSource {
     func getDataForSensor(sensor: Sensor) -> Double {
         guard
             let uuid = SensorSuite.SENSOR_TO_BLEUUID[sensor],
-            let dataString = characteristicValues[uuid],
-            let dataDouble = Double(dataString)
+            let dataBytes = characteristicValues[uuid],
+            dataBytes.count >= 2
         else { return -1 }
         
-        return dataDouble
+        return Double((dataBytes[1] << 8) + dataBytes[0])
     }
 }
 
@@ -157,10 +165,11 @@ extension SensorSuite: SensorController {
         print("Powering off!")
         guard
             let target = self.characteristicMap[.CONFIG],
-            let peripheral = self.peripheral
+            let peripheral = self.peripheral,
+            peripheral.state == .connected
         else { return }
         
-        let data = "1".data(using: .utf8)!
+        let data = Data([1 as UInt8])
         
         peripheral.writeValue(data, for: target, type: .withoutResponse)
     }
@@ -169,10 +178,11 @@ extension SensorSuite: SensorController {
         print("Powering on!")
         guard
             let target = self.characteristicMap[.CONFIG],
-            let peripheral = self.peripheral
+            let peripheral = self.peripheral,
+            peripheral.state == .connected
         else { return }
         
-        let data = "2".data(using: .utf8)!
+        let data = Data([2 as UInt8])
         
         peripheral.writeValue(data, for: target, type: .withoutResponse)
     }

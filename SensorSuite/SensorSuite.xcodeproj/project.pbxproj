@@ -43,6 +43,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CE0C36A2273C36F100E5626E /* SensorSuite--macOS--Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "SensorSuite--macOS--Info.plist"; sourceTree = "<group>"; };
 		CEE220AC27399F3F00838067 /* SensorSuiteApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorSuiteApp.swift; sourceTree = "<group>"; };
 		CEE220AD27399F3F00838067 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		CEE220AE27399F3F00838067 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -96,6 +97,7 @@
 		CEE220A627399F3E00838067 = {
 			isa = PBXGroup;
 			children = (
+				CE0C36A2273C36F100E5626E /* SensorSuite--macOS--Info.plist */,
 				CEE220EE2739CA3800838067 /* SensorSuite--iOS--Info.plist */,
 				CEE220AB27399F3F00838067 /* Shared */,
 				CEE220BA27399F3F00838067 /* macOS */,
@@ -558,6 +560,8 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "SensorSuite--macOS--Info.plist";
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "Requires access to Bluetooth.";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -586,6 +590,8 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "SensorSuite--macOS--Info.plist";
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "Requires access to Bluetooth.";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
