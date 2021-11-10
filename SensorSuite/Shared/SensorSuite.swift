@@ -51,7 +51,7 @@ class SensorSuite: NSObject, ObservableObject {
     }
     
     func sensorRefreshLoop() {
-        self.refreshTimer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { timer in
+        self.refreshTimer = Timer.scheduledTimer(withTimeInterval: 0.25, repeats: true) { timer in
             guard timer.isValid else { return }
             DispatchQueue.main.async {
                 self.refreshSensorData()
