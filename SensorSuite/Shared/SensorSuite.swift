@@ -43,6 +43,7 @@ class SensorSuite: NSObject, ObservableObject {
     var characteristicMap = [BLEUUID: CBCharacteristic]()
     var characteristicValues = [BLEUUID: [UInt8]]()
     var refreshTimer: Timer?
+    var enableRefresh: Bool = true
     
     override init() {
         super.init()
@@ -51,9 +52,10 @@ class SensorSuite: NSObject, ObservableObject {
     }
     
     func sensorRefreshLoop() {
-        self.refreshTimer = Timer.scheduledTimer(withTimeInterval: 0.25, repeats: true) { timer in
+        self.refreshTimer = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { timer in
             guard timer.isValid else { return }
             DispatchQueue.main.async {
+                guard self.enableRefresh else { return }
                 self.refreshSensorData()
             }
         }
@@ -153,8 +155,9 @@ extension SensorSuite: SensorDataSource {
         guard
             let uuid = SensorSuite.SENSOR_TO_BLEUUID[sensor],
             let dataBytes = characteristicValues[uuid],
+            enableRefresh,
             dataBytes.count >= 2
-        else { return -1 }
+        else { return 0 }
         
         return Double((dataBytes[1] << 8) + dataBytes[0])
     }
@@ -163,6 +166,7 @@ extension SensorSuite: SensorDataSource {
 extension SensorSuite: SensorController {
     func powerSensorsOff() {
         print("Powering off!")
+        self.enableRefresh = false
         guard
             let target = self.characteristicMap[.CONFIG],
             let peripheral = self.peripheral,
@@ -176,6 +180,7 @@ extension SensorSuite: SensorController {
     
     func powerSensorsOn() {
         print("Powering on!")
+        self.enableRefresh = true
         guard
             let target = self.characteristicMap[.CONFIG],
             let peripheral = self.peripheral,
