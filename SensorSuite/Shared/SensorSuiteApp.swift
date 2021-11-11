@@ -14,7 +14,9 @@ struct SensorSuiteApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView(sensorController: suite, sensorDataSource: suite)
+            #if os(macOS)
                 .frame(width: 600, height: 800, alignment: .center)
+            #endif
                 
         }
     }
