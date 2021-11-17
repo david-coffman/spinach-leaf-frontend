@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum Sensor {
+enum Sensor: CaseIterable {
     case LEFT_LIDAR
     case CENTER_LIDAR
     case RIGHT_LIDAR
