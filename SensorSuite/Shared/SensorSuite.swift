@@ -139,6 +139,13 @@ extension SensorSuite: CBPeripheralDelegate {
             let uuid = BLEUUID.from(characteristic.uuid)
         else { return }
         characteristicValues[uuid] = value.reversed().reversed()
+        if (uuid == .CONFIG && characteristicValues[uuid]![0] != (self.enableRefresh ? 2 : 1)) {
+            if (self.enableRefresh) {
+                self.powerSensorsOn()
+            } else {
+                self.powerSensorsOff()
+            }
+        }
         objectWillChange.send()
     }
 }
