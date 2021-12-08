@@ -166,7 +166,7 @@ extension SensorSuite: SensorDataSource {
             dataBytes.count >= 2
         else { return 0 }
         
-        return Double((dataBytes[1] << 8) + dataBytes[0])
+        return Double((Int(dataBytes[1]) << 8) + Int(dataBytes[0]))
     }
 }
 
