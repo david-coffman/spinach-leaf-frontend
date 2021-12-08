@@ -139,13 +139,6 @@ extension SensorSuite: CBPeripheralDelegate {
             let uuid = BLEUUID.from(characteristic.uuid)
         else { return }
         characteristicValues[uuid] = value.reversed().reversed()
-        if (uuid == .CONFIG && characteristicValues[uuid]![0] != (self.enableRefresh ? 2 : 1)) {
-            if (self.enableRefresh) {
-                self.powerSensorsOn()
-            } else {
-                self.powerSensorsOff()
-            }
-        }
         objectWillChange.send()
     }
 }
@@ -172,7 +165,6 @@ extension SensorSuite: SensorDataSource {
 
 extension SensorSuite: SensorController {
     func powerSensorsOff() {
-        print("Powering off!")
         self.enableRefresh = false
         guard
             let target = self.characteristicMap[.CONFIG],
@@ -182,11 +174,10 @@ extension SensorSuite: SensorController {
         
         let data = Data([1 as UInt8])
         
-        peripheral.writeValue(data, for: target, type: .withoutResponse)
+        peripheral.writeValue(data, for: target, type: .withResponse)
     }
     
     func powerSensorsOn() {
-        print("Powering on!")
         self.enableRefresh = true
         guard
             let target = self.characteristicMap[.CONFIG],
@@ -196,6 +187,6 @@ extension SensorSuite: SensorController {
         
         let data = Data([2 as UInt8])
         
-        peripheral.writeValue(data, for: target, type: .withoutResponse)
+        peripheral.writeValue(data, for: target, type: .withResponse)
     }
 }
